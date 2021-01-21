@@ -15,9 +15,9 @@ body {
     flex-grow: 1;
     flex: 1 1 30%;
     height: auto; 
-    width: 100%; 
-    padding: 20px;
-    margin: 10px 0 0 2%;
+    width: 92%; 
+    padding: 25px;
+    margin: 0px 0 0 2%;
    
   }
   .sale-wrapper{
@@ -30,24 +30,30 @@ body {
       display: inline-block;
   }
 
-  .sale-button-div {
-    background: linear-gradient(150deg,#e1163c,#a11453);
-    border-radius: 3px;
-    padding: 12px 15px !important;
-    font-family: gotham-book,'Arial',sans-serif;
-    text-align: center;
-    border: 0;
-    color: #fff;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    cursor: pointer;
-    font-size: 0;
-    letter-spacing: -1px;
-    position: relative;
-    margin-top: 20px !important;
-    height: 30px;
-    float: right;
-    width: 150px;
+.sale-button-div button {
+  background: linear-gradient(150deg,#e1163c,#a11453);
+  border-radius: 4px;
+  padding: 8px 15px !important;
+  font-family: gotham-book,'Arial',sans-serif;
+  text-align: center;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: .16px;
+  position: relative;
+  margin-left: 13rem;
+  margin-top: 2.5rem;
+  height: 2.75rem;
+  float: right;
+  width: 15rem;
+}
+
+.dubbleArrow{
+  color: #e1163c;
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;  
 }
   
   #imgbox {
@@ -61,11 +67,119 @@ body {
     width:100%;
     position:relative;
   }
+  span.premium-brand {
+    background: #222;
+    color: #fff;
+    padding: 4px 4px 4px 4px;
+    font-size: 16px;
+  }
+  .depFlight  {
+    font-size: 28px;
+    color: #000;
+    font-weight: 600;
+  }
+  .destFlight  {
+    font-size: 28px;
+    color: #000;
+    font-weight: 600;
+  }
+
+  .WS-outbound-date, .WS-return-date {
+    color: #222;
+    margin-left: 10px;
+    margin-right: 5px;
+    line-height: 25px;
+    display: inline-block;
+    font-size: 14px;
+    font-family: gotham-book;
+  }
+
+  .baggageDet{
+    margin-left:.6rem ;
+  }
+  .brandBaggage  {
+    font-family: gotham-book,'Arial',sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    align-items: center;
+    color: #181818;
+    margin-top: 7px;
+  }
+  .WS-location-detail {
+    margin-top: .5rem;
+  }
+  .WS-location-point  {
+    margin-top: .5rem;
+  }
+
+  .WS-location-detail> .WS-loc-icn{
+    margin: 0px 5px
+  }
+
+  .sale-container .findOther-date {
+    display: block;
+    position: relative;
+    width: 96%;
+    padding: 15px;
+    margin: 0 0 3% 2%;
+    height: 35px;
+    background: #f3f3f3;
+    border: 1px solid #f3f3f3;
+    box-sizing: border-box;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    float: left;
+    text-align: center;
+    padding: 8px 0;
+    cursor: pointer;
+   }
+
+   .sale-container .find-other-date-txt{
+    font-weight: 500;
+    font-family: gotham-book,'Arial',sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #4f145b;
+   }
+
+   .find-other-date-icn{
+    margin: 0 1%;
+   }
 
 
-/* .search-results-card {
-    -ms-flex-preferred-size: calc(33.33% - 18px);
-    flex-basis: calc(33.33% - 18px);
-    max-width: calc(33.33% - 18px);
-} */
+    .flex-book-tab {
+      color: #000;
+      line-height: 14px;
+      margin: 0px 28px;
+      padding: 0;
+      border: 0;
+      text-align: right;
+      height: auto;
+  }
+
+.sale-container .flex-book-tab-txt {
+  position: relative;
+  display: inline-block;
+  padding: 7px 11px;
+  border: solid 1px #d3d3d3;
+  background-color: #ddd;
+  border-bottom: 0;
+  font-family: gotham-book,'Arial',sans-serif;
+  font-size: 12px;
+  height: 15px;
+  width: auto;
+  font-style: normal;
+  line-height: 14px;
+  align-items: center;
+  text-align: center;
+  color: #323232;
+}
+   
+  
+  
+
+
 
