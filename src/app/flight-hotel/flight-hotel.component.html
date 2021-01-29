@@ -1,312 +1,96 @@
-<section class="sale-container">
-    <div class="sale-box">
-        <div class="flex-book-tab">
-            <div class="flex-book-tab-txt">Book now, change later. Flexible bookings.</div>
-        </div>
-        <article class="sale-details">
-            <div class="sale-wrapper">
-                <div class="sale-image-div">
-                    <figure id="imgbox">
-                        <img class="lazy" src="/assets/img/hotelref.jpg" alt="">
-                    </figure>
-                </div>
-                <div class="sale-description-div">
-                    <!-- <h1>Hotel 1</h1>
-                    <h3>Seatle, USA</h3> -->
-                    <span class="WS-loc-txt premium-brand "> Premium </span>
-                    <div class="WS-location-point ">
-                        <span class="WS-loc-icn ">
-                            <span class="depFlight ">London Heathrow</span>
-                            <span class="flightCode ">(LHR)</span>
-                            <span class="dubbleArrow "><i class="fa fa-exchange" aria-hidden="true"></i>
-                            </span>
-                            <span class="destFlight ">Orlando</span>
-                            <span class="flightCode ">(MCO)</span>
-                        </span>
-                    </div>
-                    <div class="WS-location-detail ">
-                        <div class="">
-                            <span class="WS-loc-txt ">
-                                <span class="WS-loc-icn ">
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                </span>
-                                <span class="WS-outbound-date ">08 Sep</span> - <span class="WS-return-date ">15 Sep 21
-                                </span>
-                            </span>
-                        </div>
-                        <div class="brandBaggage ">
-                            <span class="WS-loc-txt ">
-                                <span class="WS-loc-icn ">
-                                            <i class="fa fa-suitcase" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="baggageDet">2 x 23kg baggage </span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="sale-button-div">
-                    <button class="view">Book from £621</button>
-                </div>
-            </div>
-        </article>
-        <div class="findOther-date" >
-            <span class="find-other-date-txt">Find other dates</span>
-            <span class="find-other-date-icn"> <i class="fa fa-angle-down" aria-hidden="true"></i>
-            </span>
-        </div>
-    </div>
+<!-- https://s3.eu-west-2.amazonaws.com/airlinespocbucket/JsonFiles%2Fsalepage-v8.json -->
 
-    <div class="sale-box">
-        <div class="flex-book-tab">
-            <div class="flex-book-tab-txt">Book now, change later. Flexible bookings.</div>
-        </div>
-        <article class="sale-details">
-            <div class="sale-wrapper">
-                <div class="sale-image-div">
-                    <figure id="imgbox">
-                        <img class="lazy" src="/assets/img/hotelref.jpg" alt="">
-                    </figure>
-                </div>
-                <div class="sale-description-div">
-                    <!-- <h1>Hotel 1</h1>
-                    <h3>Seatle, USA</h3> -->
-                    <span class="WS-loc-txt premium-brand "> Premium </span>
-                    <div class="WS-location-point ">
-                        <span class="WS-loc-icn ">
-                            <span class="depFlight ">London Heathrow</span>
-                            <span class="flightCode ">(LHR)</span>
-                            <span class="dubbleArrow "><i class="fa fa-exchange" aria-hidden="true"></i>
-                            </span>
-                            <span class="destFlight ">Orlando</span>
-                            <span class="flightCode ">(MCO)</span>
-                        </span>
-                    </div>
-                    <div class="WS-location-detail ">
-                        <div class="">
-                            <span class="WS-loc-txt ">
-                                <span class="WS-loc-icn ">
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                </span>
-                                <span class="WS-outbound-date ">08 Sep</span> - <span class="WS-return-date ">15 Sep 21
-                                </span>
-                            </span>
-                        </div>
-                        <div class="brandBaggage ">
-                            <span class="WS-loc-txt ">
-                                <span class="WS-loc-icn ">
-                                            <i class="fa fa-suitcase" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="baggageDet">2 x 23kg baggage </span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="sale-button-div">
-                    <button class="view">Book from £621</button>
-                </div>
-            </div>
-        </article>
-        <div class="findOther-date" >
-            <span class="find-other-date-txt">Find other dates</span>
-            <span class="find-other-date-icn"> <i class="fa fa-angle-down" aria-hidden="true"></i>
-            </span>
-        </div>
-    </div>
+<div>
+    <ui-switch checkedLabel="List" uncheckedLabel="Grid" (valueChange)="onValueChange($event)"></ui-switch>
+</div>
 
-    <div class="sale-box">
-        <div class="flex-book-tab">
-            <div class="flex-book-tab-txt">Book now, change later. Flexible bookings.</div>
+<section class="grid-section" *ngIf="switchView">
+    <article class="cardView" *ngFor="let flight of flightsDetails">
+        <div class="card-image">
+            <figure class="grid-imgbox">
+                <img class="grid-img" src="{{flight.image}}" alt="">
+            </figure>
         </div>
-        <article class="sale-details">
-            <div class="sale-wrapper">
-                <div class="sale-image-div">
-                    <figure id="imgbox">
-                        <img class="lazy" src="/assets/img/hotelref.jpg" alt="">
-                    </figure>
-                </div>
-                <div class="sale-description-div">
-                    <!-- <h1>Hotel 1</h1>
-                    <h3>Seatle, USA</h3> -->
-                    <span class="WS-loc-txt premium-brand "> Premium </span>
-                    <div class="WS-location-point ">
-                        <span class="WS-loc-icn ">
-                            <span class="depFlight ">London Heathrow</span>
-                            <span class="flightCode ">(LHR)</span>
-                            <span class="dubbleArrow "><i class="fa fa-exchange" aria-hidden="true"></i>
-                            </span>
-                            <span class="destFlight ">Orlando</span>
-                            <span class="flightCode ">(MCO)</span>
-                        </span>
-                    </div>
-                    <div class="WS-location-detail ">
-                        <div class="">
-                            <span class="WS-loc-txt ">
-                                <span class="WS-loc-icn ">
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                </span>
-                                <span class="WS-outbound-date ">08 Sep</span> - <span class="WS-return-date ">15 Sep 21
-                                </span>
-                            </span>
-                        </div>
-                        <div class="brandBaggage ">
-                            <span class="WS-loc-txt ">
-                                <span class="WS-loc-icn ">
-                                            <i class="fa fa-suitcase" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="baggageDet">2 x 23kg baggage </span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="sale-button-div">
-                    <button class="view">Book from £621</button>
-                </div>
-            </div>
-        </article>
-        <div class="findOther-date" >
-            <span class="find-other-date-txt">Find other dates</span>
-            <span class="find-other-date-icn"> <i class="fa fa-angle-down" aria-hidden="true"></i>
-            </span>
-        </div>
-    </div>
+        <div class="card-content">
+            <span class="card-loc-txt card-premium-brand"> {{flight.cabin}} </span>
+            <div class="card-location-point ">
+                <span class="card-loc-icn ">
+                    <span class="card-depFlight ">{{flight.origin_desc}}</span>
+                    <span class="flightCode ">({{flight.origin_code}})</span>
+                    <span class="dubbleArrow "><i class="fa fa-exchange" aria-hidden="true"></i>
+                    </span>
+                    <span class="card-depFlight ">{{flight.destination_desc}}</span>
+                    <span class="flightCode ">({{flight.destination_code}})</span>
+                </span>
 
-    <div class="sale-box">
-        <div class="flex-book-tab">
-            <div class="flex-book-tab-txt">Book now, change later. Flexible bookings.</div>
-        </div>
-        <article class="sale-details">
-            <div class="sale-wrapper">
-                <div class="sale-image-div">
-                    <figure id="imgbox">
-                        <img class="lazy" src="/assets/img/hotelref.jpg" alt="">
-                    </figure>
-                </div>
-                <div class="sale-description-div">
-                    <!-- <h1>Hotel 1</h1>
-                    <h3>Seatle, USA</h3> -->
-                    <span class="WS-loc-txt premium-brand "> Premium </span>
-                    <div class="WS-location-point ">
-                        <span class="WS-loc-icn ">
-                            <span class="depFlight ">London Heathrow</span>
-                            <span class="flightCode ">(LHR)</span>
-                            <span class="dubbleArrow "><i class="fa fa-exchange" aria-hidden="true"></i>
-                            </span>
-                            <span class="destFlight ">Orlando</span>
-                            <span class="flightCode ">(MCO)</span>
-                        </span>
-                    </div>
-                    <div class="WS-location-detail ">
-                        <div class="">
-                            <span class="WS-loc-txt ">
-                                <span class="WS-loc-icn ">
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                </span>
-                                <span class="WS-outbound-date ">08 Sep</span> - <span class="WS-return-date ">15 Sep 21
-                                </span>
-                            </span>
-                        </div>
-                        <div class="brandBaggage ">
-                            <span class="WS-loc-txt ">
-                                <span class="WS-loc-icn ">
-                                            <i class="fa fa-suitcase" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="baggageDet">2 x 23kg baggage </span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="sale-button-div">
-                    <button class="view">Book from £621</button>
-                </div>
             </div>
-        </article>
+        </div>
         <div class="findOther-date" >
             <span class="find-other-date-txt">Find other dates</span>
             <span class="find-other-date-icn"> <i class="fa fa-angle-down" aria-hidden="true"></i>
             </span>
         </div>
-    </div>
 
-    <div class="sale-box">
-        <div class="flex-book-tab">
-            <div class="flex-book-tab-txt">Book now, change later. Flexible bookings.</div>
-        </div>
-        <article class="sale-details">
-            <div class="sale-wrapper">
-                <div class="sale-image-div">
-                    <figure id="imgbox">
-                        <img class="lazy" src="/assets/img/hotelref.jpg" alt="">
-                    </figure>
-                </div>
-                <div class="sale-description-div">
-                    <!-- <h1>Hotel 1</h1>
-                    <h3>Seatle, USA</h3> -->
-                    <span class="WS-loc-txt premium-brand "> Premium </span>
-                    <div class="WS-location-point ">
-                        <span class="WS-loc-icn ">
-                            <span class="depFlight ">London Heathrow</span>
-                            <span class="flightCode ">(LHR)</span>
-                            <span class="dubbleArrow "><i class="fa fa-exchange" aria-hidden="true"></i>
-                            </span>
-                            <span class="destFlight ">Orlando</span>
-                            <span class="flightCode ">(MCO)</span>
-                        </span>
-                    </div>
-                    <div class="WS-location-detail ">
-                        <div class="">
-                            <span class="WS-loc-txt ">
-                                <span class="WS-loc-icn ">
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                </span>
-                                <span class="WS-outbound-date ">08 Sep</span> - <span class="WS-return-date ">15 Sep 21
-                                </span>
-                            </span>
-                        </div>
-                        <div class="brandBaggage ">
-                            <span class="WS-loc-txt ">
-                                <span class="WS-loc-icn ">
-                                            <i class="fa fa-suitcase" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="baggageDet">2 x 23kg baggage </span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="sale-button-div">
-                    <button class="view">Book from £621</button>
-                </div>
+        <div class="card-location-detail ">
+            <div class="">
+                <span class="card-loc-txt ">
+                    <span class="card-loc-icn ">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                    </span>
+                    <span class="WS-outbound-date ">{{flight.OUTBOUND_DATE | date :'dd MMM yyyy'}}</span> - <span class="WS-return-date ">{{flight.INBOUND_DATE | date :'dd MMM yyyy'}}
+                    </span>
+                </span>
             </div>
-        </article>
-        <div class="findOther-date" >
-            <span class="find-other-date-txt">Find other dates</span>
-            <span class="find-other-date-icn"> <i class="fa fa-angle-down" aria-hidden="true"></i>
-            </span>
-        </div>
-    </div>
+            <div class="card-brandBaggage ">
+                <span class="card-loc-txt ">
+                    <span class="card-loc-icn ">
+                                <i class="fa fa-suitcase" aria-hidden="true"></i>
+                            </span>
+                            <span class="baggageDet">{{flight.luggage_allowance}} </span>
+                </span>
 
-    <div class="sale-box">
+            </div>
+        </div>
+        <div class="findOther-date" >
+            <span class="find-other-date-txt">Find other dates</span>
+            <span class="find-other-date-icn"> <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </span>
+        </div>
+
+        <div class="card-button-div">
+            <button class="view">Book from £{{flight.price}} pp</button>
+        </div> 
+    </article>
+</section>
+<section class="sale-container" *ngIf="!switchView">
+    <div class="sale-box" *ngFor="let flight of flightsDetails">
         <div class="flex-book-tab">
             <div class="flex-book-tab-txt">Book now, change later. Flexible bookings.</div>
         </div>
+
         <article class="sale-details">
             <div class="sale-wrapper">
                 <div class="sale-image-div">
                     <figure id="imgbox">
-                        <img class="lazy" src="/assets/img/hotelref.jpg" alt="">
+
+                        <img class="lazy" src="{{flight.image}}" alt="">
+
                     </figure>
                 </div>
                 <div class="sale-description-div">
                     <!-- <h1>Hotel 1</h1>
                     <h3>Seatle, USA</h3> -->
-                    <span class="WS-loc-txt premium-brand "> Premium </span>
+
+                    <span class="WS-loc-txt premium-brand "> {{flight.cabin}} </span>
                     <div class="WS-location-point ">
                         <span class="WS-loc-icn ">
-                            <span class="depFlight ">London Heathrow</span>
-                            <span class="flightCode ">(LHR)</span>
+                            <span class="depFlight ">{{flight.origin_desc}}</span>
+                            <span class="flightCode ">({{flight.origin_code}})</span>
                             <span class="dubbleArrow "><i class="fa fa-exchange" aria-hidden="true"></i>
                             </span>
-                            <span class="destFlight ">Orlando</span>
-                            <span class="flightCode ">(MCO)</span>
+                            <span class="destFlight ">{{flight.destination_desc}}</span>
+                            <span class="flightCode ">({{flight.destination_code}})</span>
+
                         </span>
                     </div>
                     <div class="WS-location-detail ">
@@ -315,7 +99,9 @@
                                 <span class="WS-loc-icn ">
                                     <i class="fa fa-calendar" aria-hidden="true"></i>
                                 </span>
-                                <span class="WS-outbound-date ">08 Sep</span> - <span class="WS-return-date ">15 Sep 21
+
+                                <span class="WS-outbound-date ">{{flight.OUTBOUND_DATE | date :'dd MMM yyyy'}}</span> - <span class="WS-return-date ">{{flight.INBOUND_DATE | date :'dd MMM yyyy'}}
+
                                 </span>
                             </span>
                         </div>
@@ -324,13 +110,15 @@
                                 <span class="WS-loc-icn ">
                                             <i class="fa fa-suitcase" aria-hidden="true"></i>
                                         </span>
-                                        <span class="baggageDet">2 x 23kg baggage </span>
+
+                                        <span class="baggageDet">{{flight.luggage_allowance}} </span>
                             </span>
                         </div>
                     </div>
                 </div>
                 <div class="sale-button-div">
-                    <button class="view">Book from £621</button>
+                    <button class="view">Book from £{{flight.price}} pp</button>
+
                 </div>
             </div>
         </article>
@@ -340,6 +128,4 @@
             </span>
         </div>
     </div>
-   
-   
 </section>

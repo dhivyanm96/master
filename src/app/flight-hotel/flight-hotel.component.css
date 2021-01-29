@@ -178,8 +178,113 @@ body {
   color: #323232;
 }
    
+
+ .grid-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  margin-right: 20px;
+  margin-left: 20px;
+ } 
+
+ .cardView {
+  display: flex;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #333;
+  position: relative;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 1;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.2);
+  border: solid 1px #d9d9d9;
+  margin: 20px 3px 0px 15px;
+  flex-basis: calc(33.33% - 18px);
+  max-width: calc(33.33% - 18px);
+}
+
+.cardView .card-image {
+  height: auto;
+  background: #fff;
+  position: relative;
+  /* background: #61126b; */
+}
+
+.cardView .card-image img {
+  display: block;
+  object-fit: cover;
+  width: 80%;
+  height: auto;
+  position: relative;
+  top: 0;
+  left:35px;
+  right: 0;
+  bottom: 0;
+}
+
+.grid-imgbox{
+  position: relative;
+}
+
+
+.card-depFlight  {
+  font-size: 23px;
+  color: #000;
+  font-weight: 600;
+}
+.card-destFlight  {
+  font-size: 23px;
+  color: #000;
+  font-weight: 600;
+}
+
   
-  
+
+.card-brandBaggage  {
+  font-family: gotham-book,'Arial',sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  align-items: center;
+  color: #181818;
+  margin-top: 7px;
+}
+.card-location-detail {
+  margin-top: .5rem;
+  margin-left:.5rem;
+}
+.card-location-point  {
+  margin-top: .5rem;
+  margin-left:.5rem;
+}
+.card-location-detail> .card-loc-icn{
+  margin: 0px 5px
+}
+
+.card-premium-brand{
+  background: #222;
+    color: #fff;
+    padding: 4px 4px 4px 4px;
+    margin-left: .5rem;
+    font-size: 16px;
+}
 
 
-
+.card-button-div button {
+    background: linear-gradient(150deg,#e1163c,#a11453);
+    border-radius: 4px;
+    padding: 8px 15px !important;
+    font-family: gotham-book,'Arial',sans-serif;
+    text-align: center;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: .16px;
+    position: relative;
+    margin-left: 5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 20px;
+    height: 2.75rem;
+    width: 15rem;
+}
