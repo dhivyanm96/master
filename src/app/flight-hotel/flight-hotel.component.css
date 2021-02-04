@@ -31,7 +31,7 @@ body {
   }
 
 .sale-button-div button {
-  background: linear-gradient(150deg,#e1163c,#a11453);
+  background: linear-gradient(150deg,#1417d8,#08cf19);
   border-radius: 4px;
   padding: 8px 15px !important;
   font-family: gotham-book,'Arial',sans-serif;
@@ -39,14 +39,14 @@ body {
   border: 0;
   color: #fff;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 13px;
   letter-spacing: .16px;
   position: relative;
   margin-left: 13rem;
   margin-top: 2.5rem;
   height: 2.75rem;
   float: right;
-  width: 15rem;
+  width: 10rem;
 }
 
 .dubbleArrow{
@@ -91,14 +91,13 @@ body {
     line-height: 25px;
     display: inline-block;
     font-size: 14px;
-    font-family: gotham-book;
   }
 
   .baggageDet{
     margin-left:.6rem ;
   }
   .brandBaggage  {
-    font-family: gotham-book,'Arial',sans-serif;
+    font-family: 'Arial',sans-serif;
     font-size: 14px;
     line-height: 17px;
     align-items: center;
@@ -123,8 +122,8 @@ body {
     padding: 15px;
     margin: 0 0 3% 2%;
     height: 35px;
-    background: #f3f3f3;
-    border: 1px solid #f3f3f3;
+    background: #c2d8ea;
+    border: 1px solid #c2d8ea;
     box-sizing: border-box;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
@@ -136,7 +135,7 @@ body {
 
    .sale-container .find-other-date-txt{
     font-weight: 500;
-    font-family: gotham-book,'Arial',sans-serif;
+    font-family: 'Arial',sans-serif;
     font-size: 12px;
     line-height: 14px;
     align-items: center;
@@ -167,7 +166,7 @@ body {
   border: solid 1px #d3d3d3;
   background-color: #ddd;
   border-bottom: 0;
-  font-family: gotham-book,'Arial',sans-serif;
+  font-family: 'Arial',sans-serif;
   font-size: 12px;
   height: 15px;
   width: auto;
@@ -242,7 +241,7 @@ body {
   
 
 .card-brandBaggage  {
-  font-family: gotham-book,'Arial',sans-serif;
+  font-family: 'Arial',sans-serif;
   font-size: 14px;
   line-height: 17px;
   align-items: center;
@@ -271,20 +270,20 @@ body {
 
 
 .card-button-div button {
-    background: linear-gradient(150deg,#e1163c,#a11453);
+    background: linear-gradient(150deg,#1417d8,#08cf19);
     border-radius: 4px;
     padding: 8px 15px !important;
-    font-family: gotham-book,'Arial',sans-serif;
+    font-family:Georgia, 'Times New Roman', Times,sans-serif;
     text-align: center;
     border: 0;
     color: #fff;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 13px;
     letter-spacing: .16px;
     position: relative;
     margin-left: 5rem;
     margin-top: 2.5rem;
     margin-bottom: 20px;
     height: 2.75rem;
-    width: 15rem;
+    width: 12rem;
 }
