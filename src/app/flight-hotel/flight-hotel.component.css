@@ -50,7 +50,6 @@ body {
 }
 
 .dubbleArrow{
-  color: #e1163c;
   display: inline-block;
   position: relative;
   margin: 0 10px;  
@@ -263,9 +262,9 @@ body {
 .card-premium-brand{
   background: #222;
     color: #fff;
-    padding: 4px 4px 4px 4px;
+    padding: 6px 4px 4px 5px;
     margin-left: .5rem;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 
