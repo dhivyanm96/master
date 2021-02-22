@@ -2,35 +2,43 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.services';
 import sampleData from '../services/staticData.json';
 import { AwsService} from '../services/aws.service';
+import { NgxSpinnerService } from "ngx-spinner";
 
 
 @Component({
   selector: 'app-flight-hotel',
   templateUrl: './flight-hotel.component.html',
-  styleUrls: ['./flight-hotel.component.css'],
+  styleUrls: ['./flight-hotel.component.scss'],
   providers: [DataService]
 })
 export class FlightHotelComponent implements OnInit {
 
-  flightsDetails :any;
-  switchView : boolean =false;
-  constructor( private data: DataService, private awsService: AwsService ) { }
+  flightsDetails : any;
+  switchView : boolean = false;
+  constructor( private data: DataService, private awsService: AwsService,private spinner: NgxSpinnerService ) { }
 
   ngOnInit() {
+    this.getFlightsDetail();
+  }
+
+
+  async getFlightsDetail(){
+    this.spinner.show();
     this.awsService.getSignedUrlFunc();
-    setTimeout (() => {
-      console.log("Hello from setTimeout");
-      this.data.getFlights(this.awsService.getSignedUrlFunc()).subscribe(data =>{
+   await setTimeout (() => {
+       this.data.getFlights(this.awsService.getSignedUrlFunc()).subscribe(data =>{
         this.flightsDetails = data;
-        console.log(this.flightsDetails,"getFlightsgetFlightsgetFlightsgetFlightsgetFlights");
+        this.flightsDetails &&  this.spinner.hide();
       });
    }, 3000)
   }
 
 
   onValueChange(event : any){
-    console.log(event);
     this.switchView = event;
   }
 
+  ngOnDestroy() {
+    // this.data.getFlights(this.awsService.getSignedUrlFunc())..
+  }
 }

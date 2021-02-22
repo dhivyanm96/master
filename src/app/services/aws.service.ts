@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as AWS from 'aws-sdk';
 
-
 var BucketName = 'airlinespocbucket'; //Bucket
-
 
 AWS.config.region = 'eu-west-2'; // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -36,7 +34,6 @@ export class AwsService {
       Expires: UrlExpireSeconds
     };
     var url = s3.getSignedUrl('getObject', params);
-    console.log('The URL is', url);
     return url;
   }
 
