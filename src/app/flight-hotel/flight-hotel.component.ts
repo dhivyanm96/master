@@ -18,19 +18,27 @@ export class FlightHotelComponent implements OnInit {
   constructor( private data: DataService, private awsService: AwsService,private spinner: NgxSpinnerService ) { }
 
   ngOnInit() {
-    this.getFlightsDetail();
+    // this.getFlightsDetail();
+    this.getAEMurl();
   }
 
 
-  async getFlightsDetail(){
-    this.spinner.show();
-    this.awsService.getSignedUrlFunc();
-   await setTimeout (() => {
-       this.data.getFlights(this.awsService.getSignedUrlFunc()).subscribe(data =>{
-        this.flightsDetails = data;
-        this.flightsDetails &&  this.spinner.hide();
-      });
-   }, 3000)
+  // async getFlightsDetail(){
+  //   this.spinner.show();
+  //   this.awsService.getSignedUrlFunc();
+  //  await setTimeout (() => {
+  //      this.data.getFlightDetailsFromAEM().subscribe(data =>{
+  //       this.flightsDetails = data;
+  //       this.flightsDetails &&  this.spinner.hide();
+  //     });
+  //  }, 3000)
+  // }
+
+  getAEMurl(){
+    this.data.getFlightDetailsFromAEM().subscribe(data =>{
+      this.flightsDetails = data;
+      this.flightsDetails &&  this.spinner.hide();
+    });
   }
 
 
