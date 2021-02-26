@@ -5,7 +5,9 @@ import { AwsService} from '../services/aws.service';
   providedIn: 'root'
 })
 export class DataService {
-  aemUrl = "https://stg.virginatlantic.com/content/dam/vaa/CustomFilerConvertor/sales/salepage-v8.json";
+  // aemUrl = "https://stg.virginatlantic.com/content/dam/vaa/CustomFilerConvertor/sales/salepage-v8.json"; 
+  aemUrl = "/content/dam/vaa/CustomFilerConvertor/sales/salepage-v8.json";
+
   constructor(private http: HttpClient, private awsUrl : AwsService) {} 
   
   getFlights(signedUrl){
